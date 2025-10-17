@@ -83,7 +83,7 @@ class VideoThread(QThread):
         
         # --- NEW: Timers for the recording logic ---
         self.capture_timer = QTimer()
-        self.capture_timer.setInterval(500) # Capture a frame every 500ms (0.5s)
+        self.capture_timer.setInterval(50) # Capture a frame every 500ms (0.5s)
         self.capture_timer.timeout.connect(self.capture_frame)
         
         self.recording_timer = QTimer()
@@ -172,7 +172,7 @@ class VideoThread(QThread):
         prediction = self.srn_model.predict([dmn_input, amn_input], verbose=0)
         predicted_index = np.argmax(prediction)
         predicted_class_id = self.class_names[predicted_index]
-        sign_id = predicted_class_id.split('_')[1]
+        sign_id = predicted_class_id.split('_')[0]
         predicted_word = self.sign_map.get(sign_id, "UNKNOWN SIGN")
         confidence = prediction[0][predicted_index]
         final_text_to_display = f"{predicted_word.upper()}\n(Confidence: {confidence:.2f})"
