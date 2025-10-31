@@ -147,10 +147,28 @@ class VideoThread(QThread):
             self.frame_buffer.append(self.latest_frame)
             print(f"Frame captured. Total frames: {len(self.frame_buffer)}")
 
+    # In VideoThread class, find this function:
     def stop_recording(self):
         """Called after 3s by the recording_timer."""
         self.capture_timer.stop()
         print("Recording stopped. Processing frames...")
+        
+        # --- TEMPORARY CHANGE FOR DEBUGGING ---
+        print("!!! OVERRIDE: Loading frames from test video file instead of webcam !!!")
+        
+        # Load the frames from the known-good video file
+        cap = cv2.VideoCapture("005_004_002.mp4")
+        debug_frame_buffer = []
+        while cap.isOpened():
+            success, frame = cap.read()
+            if not success: break
+            debug_frame_buffer.append(frame)
+        cap.release()
+        
+        # Use this known-good buffer instead of the live one
+        self.frame_buffer = debug_frame_buffer
+        # --- END OF TEMPORARY CHANGE ---
+
         if len(self.frame_buffer) > 0:
             _, _, bidirectional_avm = generate_avm(self.frame_buffer)
             if bidirectional_avm is not None:
@@ -158,6 +176,7 @@ class VideoThread(QThread):
                 self.predict_sign(self.frame_buffer, bidirectional_avm)
         else:
             self.new_prediction_signal.emit("Capture failed.")
+
 
     def predict_sign(self, frame_buffer, avm_image):
         # (Prediction logic is the same)

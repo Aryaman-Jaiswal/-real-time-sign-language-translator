@@ -1,27 +1,76 @@
 # ==============================================================================
-# sign_mapper.py
+# sign_mapper.py (Definitive Version)
 #
 # Description:
-# This file contains the mapping from the LSA64 dataset's numerical sign IDs
-# to their human-readable English/Spanish words.
-# Source: http://facundoq.github.io/datasets/lsa64/
+# This file contains the CORRECTED and DEFINITIVE mapping from the LSA64
+# dataset's numerical sign IDs to their human-readable words. The keys are now
+# formatted as 3-digit strings with leading zeros to match the data format
+# used in the application.
 # ==============================================================================
 
 LSA64_MAP = {
-    "001": "Opaque", "002": "Red", "003": "Green", "004": "Yellow",
-    "005": "Bright", "006": "Light-blue", "007": "Colors", "008": "To wear",
-    "009": "Shoes", "010": "Pants", "011": "Shirt", "012": "Coat",
-    "013": "Skirt", "014": "Dress", "015": "Birth", "016": "Birthday",
-    "017": "Call", "018": "Skimmer", "019": "Bitter", "020": "Sweet milk",
-    "021": "Milk", "022": "Water", "023": "Yogurt", "024": "Map",
-    "025": "Coin", "026": "Music", "027": "Ship", "028": "None",
-    "029": "To land", "030": "Airplane", "031": "Appear", "032": "Shut down",
-    "033": "Hungry", "034": "Map", "035": "Coin", "036": "Music",
-    "037": "Ship", "038": "None", "039": "To land", "040": "Airplane",
-    "041": "Appear", "042": "Shut down", "043": "What", "044": "Where",
-    "045": "Who", "046": "Why", "047": "How", "048": "Hungry",
-    "049": "Yogurt", "050": "Accept", "051": "Thanks", "052": "Shut down",
-    "053": "Appear", "054": "To land", "055": "Airplane", "056": "None",
-    "057": "Ship", "058": "Music", "059": "Coin", "060": "Map",
-    "061": "Bitter", "062": "Skimmer", "063": "Call", "064": "Birthday"
+    "001": "Opaque",
+    "002": "Red",
+    "003": "Green",
+    "004": "Yellow",
+    "005": "Bright",
+    "006": "Light-blue",
+    "007": "Colors",
+    "008": "Pink",
+    "009": "Women",
+    "010": "Enemy",
+    "011": "Son",
+    "012": "Man",
+    "013": "Away",
+    "014": "Drawer",
+    "015": "Born",
+    "016": "Learn",
+    "017": "Call",
+    "018": "Skimmer",
+    "019": "Bitter",
+    "020": "Sweet milk",
+    "021": "Milk",
+    "022": "Water",
+    "023": "Food",
+    "024": "Argentina",
+    "025": "Uruguay",
+    "026": "Country",
+    "027": "Last name",
+    "028": "Where",
+    "029": "Mock",
+    "030": "Birthday",
+    "031": "Breakfast",
+    "032": "Photo",
+    "033": "Hungry",
+    "034": "Map",
+    "035": "Coin",
+    "036": "Music",
+    "037": "Ship",
+    "038": "None",
+    "039": "Name",
+    "040": "Patience",
+    "041": "Perfume",
+    "042": "Deaf",
+    "043": "Trap",
+    "044": "Rice",
+    "045": "Barbecue",
+    "046": "Candy",
+    "047": "Chewing-gum",
+    "048": "Spaghetti",
+    "049": "Yogurt",
+    "050": "Accept",
+    "051": "Thanks",
+    "052": "Shut down",
+    "053": "Appear",
+    "054": "To land",
+    "055": "Catch",
+    "056": "Help",
+    "057": "Dance",
+    "058": "Bathe",
+    "059": "Buy",
+    "060": "Copy",
+    "061": "Run",
+    "062": "Realize",
+    "063": "Give",
+    "064": "Find"
 }
