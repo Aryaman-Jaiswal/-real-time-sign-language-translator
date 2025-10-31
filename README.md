@@ -1,4 +1,4 @@
-```markdown
+
 # Real-Time Argentinian Sign Language Translator
 
 ![Application Screenshot](./assets/app_screenshot.png)
@@ -47,7 +47,7 @@ The core of this project is the **Sign Recognition Network (SRN)**, which is a f
 ├── srn_model.h5
 └── README.md
 
-````
+```
 
 ---
 
@@ -57,10 +57,11 @@ The core of this project is the **Sign Recognition Network (SRN)**, which is a f
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/Aryaman-Jaiswal/-real-time-sign-language-translator](https://github.com/Aryaman-Jaiswal/-real-time-sign-language-translator)
-cd -real-time-sign-language-translator
-````
 
+git clone https://github.com/Aryaman-Jaiswal/-real-time-sign-language-translator
+cd -real-time-sign-language-translator
+
+```
 **2. Set up a Python virtual environment (recommended):**
 
 ```bash
@@ -140,6 +141,3 @@ The model was trained in the `Full_DMN_AMN_SRN_Training.ipynb` notebook on Kaggl
 
 <!-- end list -->
 
-```
-
-```
